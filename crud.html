@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/product.png" type="image/x-icon">
+    <meta name="author" content="Fatma Mustafa">
+    <meta name="description"
+        content="A simple CRUD application for managing products with features to create, read, update, and delete product entries.">
+    <meta name="keywords" content="CRUD, product management, JavaScript, HTML, CSS">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <p>PRODUCT MANAGEMANT SYSTEM</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Product Name">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total">0</small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="search" onkeyup="searchData(this.value)">
+                <div class="btnSearch">
+                    <button id="searchTitle" onclick="getSearchMood(this.id)">Search By Title</button>
+                    <button id="searchCategory" onclick="getSearchMood(this.id)">Search By Category</button>
+                </div>
+            </div>
+
+            <div id="daleteAll"></div>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
