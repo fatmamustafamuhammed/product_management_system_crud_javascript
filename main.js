@@ -21,7 +21,7 @@ function getTotal() {
         total.style.background = '#040';
     }
     else {
-        total.innreHTML = ' ';
+        total.innerHTML = ' ';
         total.style.background = '#a00d02';
     }
 }
